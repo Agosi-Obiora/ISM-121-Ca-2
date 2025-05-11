@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-image: linear-gradient(to right,#9b7653,#c3b091);
+}
+
+header {
+  background: #4b3621 ;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+#stuff{
+  font-size: 30px;
+  font-family: cursive;
+  text-align: center;
+}
+
+.star-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 200px;
+}
+
+.star {
+  font-size: 2rem;
+  color: gold;
+  transform: rotate(15deg);
+}
+
+#info {
+  font-family: cursive;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* #star-1{
+  position: relative;
+  top: 200px;
+  rotate:154deg;
+  left: 20px;
+}
+
+#star-2{
+  position: sticky;
+  top: 100px;
+  rotate: 154deg;
+  right: 550px;
+}
+
+#star-3{
+  position: relative;
+  bottom: 100px;
+  rotate: 20deg;
+  left: 20px;
+}
+
+#star-4{
+  position: relative;
+  top: 190px;
+  rotate: 154deg;
+  left: 20px;
+} */
+
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.project-gallery img {
+  width: 400px;
+  height: auto;
+  border: 2px solid #444;
+  border-radius: 8px;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+  margin: 0.5rem 0;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
