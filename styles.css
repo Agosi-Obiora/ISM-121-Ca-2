@@ -1,13 +1,23 @@
-body {
-  font-family: cursive;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  line-height:1.6;
-  background-image: linear-gradient(to left,#8B5E3C,#987554);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-image: url(background1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+  min-height: 100%;
 }
 
 header {
-  background: #4b3621 ;
+  background: linear-gradient(to right,#5b2902,#5624084e);
+  opacity: 40%;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -17,17 +27,52 @@ nav a {
   color: #fff;
   margin: 0 1.2rem;
   font-size: 1.3rem;
+  font-weight: 300;
   text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #5a4724;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav a:hover {
+  color: #7d4f0f;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 main {
-  padding: 2rem;
+  flex: 1;
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 #stuff{
   position: relative;
   top: 40px;
+  line-height: 5rem;
   font-size: 40px;
+  text-align: center;
+  color: #583f12a4;
+}
+
+#stuff p{
+  position: relative;
+  top: 150px;
+  font-size: 70px;
   text-align: center;
 }
 
@@ -40,65 +85,162 @@ main {
 }
 
 .star {
-  position: relative;
-  bottom: 74px;
   font-size: 3rem;
-  color: gold;
-  transform: rotate(15deg);
+  color: rgba(77, 71, 34, 0.31);
 }
 
 #info {
-  position: relative;
-  bottom: 70px;
   text-align: center;
-  font-size: 1.5rem;
-  color: #fff;
+  font-size: 3rem;
+  color: #583f12a4;
+}
+
+#about {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #444;
+}
+
+#skill-set {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+#skill-set p {
+  background: #ffe8cc;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+#skill-set p:hover {
+  transform: scale(1.25);
+  background-color: #ffd49a;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #4b3621;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: burlywood;
+  margin: 0.1rem auto 1rem auto;
+  border-radius: 5px;
 }
 
 .project-gallery {
-  margin-top:50px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content:center; 
-  gap: 2rem 7.5rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .project-gallery figure {
   text-align: center;
-  max-width: 360px;
-  margin: 0;
+  max-width: 340px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-gallery figure:hover {
+  transform: translateY(-8px);
 }
 
 .project-gallery img {
   width: 100%;
   height: auto;
-  border: 2px solid burlywood;
-  border-radius: 25px;
+  border: 2px solid rgb(180, 141, 89);
+  border-radius: 20px;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.03);
 }
 
 .project-gallery figcaption {
-  margin-top: 0.5rem;
-  font-size: 1.4rem;
-  color:#966b27;
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+  color: #a78d5f;
+  font-weight: 600;
 }
-
 form {
-  max-width: 400px;
+  background: rgb(255, 255, 255);
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
 }
 
-form label,
-form input,
-form textarea,
-form button {
-  margin: 0.5rem 0;
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 form input,
 form textarea {
-  padding: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #b57300;
+  outline: none;
+  box-shadow: 0 0 10px rgba(239, 144, 50, 0.689);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  background-color: #b18c27;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #7b5113;
+}
+
+@media (max-width: 600px) {
+  #stuff p{
+    position: relative;
+    top: 50px;
+    font-size: 50px;
+  }
+  form{
+    width: 70%;
+  }
 }
