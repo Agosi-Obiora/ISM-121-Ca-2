@@ -5,8 +5,9 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', serif;
   line-height: 1.6;
+  background-color: #5d4f36a4;
   background-image: url(background1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,10 +17,9 @@ body {
 }
 
 header {
-  background: linear-gradient(to right,#5b2902,#5624084e);
-  opacity: 40%;
+  background: linear-gradient(to right, rgba(68, 44, 26, 0.9), rgba(132, 92, 69, 0.3));
   color: #fff;
-  padding: 1rem;
+  padding: 1.3rem;
   text-align: center;
 }
 
@@ -92,14 +92,14 @@ main {
 #info {
   text-align: center;
   font-size: 3rem;
-  color: #583f12a4;
+  color: #564019a4;
 }
 
 #about {
   font-size: 1.25rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: #444;
+  color: #825512;
 }
 
 #skill-set {
@@ -165,8 +165,7 @@ h2::after {
 .project-gallery img {
   width: 100%;
   height: auto;
-  border: 2px solid rgb(180, 141, 89);
-  border-radius: 20px;
+  border-radius: 30px;
   display: block;
   transition: transform 0.3s ease;
 }
